@@ -15,11 +15,12 @@ class Trem: public QThread{
 public:
     Trem(int,int,int);  //construtor
     void run();         //função a ser executada pela thread
+    void setVelocidade(int vel);
 
 
 //Cria um sinal
 signals:
-    void updateGUI(int,int,int);
+    void updateGUI(int,int,int,int);
 
 private:
    int x;           //posição X do trem na tela
@@ -27,5 +28,7 @@ private:
    int ID;          //ID do trem
    int velocidade;  //Velocidade. É o tempo de dormir em milisegundos entre a mudança de posição do trem
 };
+
+
 
 #endif // TREM_H

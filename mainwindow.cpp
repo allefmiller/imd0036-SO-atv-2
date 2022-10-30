@@ -7,37 +7,91 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //Cria o trem com seu (ID, posição X, posição Y)
-    trem1 = new Trem(1,60,30);
-    trem2 = new Trem(2,330,30);
-    trem3 = new Trem(3,303,40);
+    trem1 = new Trem(1,303,30);
+    trem2 = new Trem(2,484,30);
+    trem3 = new Trem(3,213,220);
+    trem4 = new Trem(4,390,220);
+    trem5 = new Trem(5,570,220);
 
-    /*
-     * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.
-     * Ou seja, sempre que o sinal UPDATEGUI foi chamado, será executada a função UPDATEINTERFACE.
-     * Os 3 parâmetros INT do sinal serão utilizados na função.
-     * Trem1 e Trem2 são os objetos que podem chamar o sinal. Se um outro objeto chamar o
-     * sinal UPDATEGUI, não haverá execução da função UPDATEINTERFACE
-     */
-    connect(trem1,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
-    connect(trem2,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
-    connect(trem3,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
+    connect(trem1,SIGNAL(updateGUI(int,int,int,int)),SLOT(updateInterface(int,int,int,int)));
+    connect(trem2,SIGNAL(updateGUI(int,int,int,int)),SLOT(updateInterface(int,int,int,int)));
+    connect(trem3,SIGNAL(updateGUI(int,int,int,int)),SLOT(updateInterface(int,int,int,int)));
+    connect(trem4,SIGNAL(updateGUI(int,int,int,int)),SLOT(updateInterface(int,int,int,int)));
+    connect(trem5,SIGNAL(updateGUI(int,int,int,int)),SLOT(updateInterface(int,int,int,int)));
 
-
-
+    trem1->start();
+    trem2->start();
+    trem3->start();
+    trem4->start();
+    trem5->start();
 }
 
-//Função que será executada quando o sinal UPDATEGUI for emitido
-void MainWindow::updateInterface(int id, int x, int y){
+void MainWindow::updateInterface(int id, int x, int y, int direcao){
     switch(id){
-    case 1: //Atualiza a posição do objeto da tela (quadrado) que representa o trem1
-        ui->label_trem1->setGeometry(x,y,21,17);
+    case 1:
+        ui->trem1->setGeometry(x,y,41,41);
+        trem1->setVelocidade(ui->slider_t1->value());
+
+        if(direcao == 1)
+           ui->trem1->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-right.png"));
+        else if(direcao == 2)
+           ui->trem1->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-down.png"));
+        else if(direcao == 3)
+           ui->trem1->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-left.png"));
+        else
+           ui->trem1->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-up.png"));
         break;
-    case 2: //Atualiza a posição do objeto da tela (quadrado) que representa o trem2
-        ui->label_trem2->setGeometry(x,y,21,17);
+    case 2:
+        ui->trem2->setGeometry(x,y,41,41);
+        trem2->setVelocidade(ui->slider_t2->value());
+
+        if(direcao == 1)
+           ui->trem2->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-right.png"));
+        else if(direcao == 2)
+           ui->trem2->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-down.png"));
+        else if(direcao == 3)
+           ui->trem2->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-left.png"));
+        else
+           ui->trem2->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-up.png"));
         break;
-    case 3: //Atualiza a posição do objeto da tela (quadrado) que representa o trem2
+    case 3:
         ui->trem3->setGeometry(x,y,41,41);
+        trem3->setVelocidade(ui->slider_t3->value());
+
+        if(direcao == 1)
+           ui->trem3->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-right.png"));
+        else if(direcao == 2)
+           ui->trem3->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-down.png"));
+        else if(direcao == 3)
+           ui->trem3->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-left.png"));
+        else
+           ui->trem3->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-up.png"));
+        break;
+    case 4:
+        ui->trem4->setGeometry(x,y,41,41);
+        trem4->setVelocidade(ui->slider_t4->value());
+
+        if(direcao == 1)
+           ui->trem4->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-right.png"));
+        else if(direcao == 2)
+           ui->trem4->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-down.png"));
+        else if(direcao == 3)
+           ui->trem4->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-left.png"));
+        else
+           ui->trem4->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-up.png"));
+        break;
+    case 5:
+        ui->trem5->setGeometry(x,y,41,41);
+        trem5->setVelocidade(ui->slider_t5->value());
+
+        if(direcao == 1)
+           ui->trem5->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-right.png"));
+        else if(direcao == 2)
+           ui->trem5->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-down.png"));
+        else if(direcao == 3)
+           ui->trem5->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-left.png"));
+        else
+           ui->trem5->setPixmap(QPixmap("/home/allef/Documentos/imd0036-SO-atv-2/sprites/sprite-train-up.png"));
         break;
     default:
         break;
@@ -47,24 +101,4 @@ void MainWindow::updateInterface(int id, int x, int y){
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-/*
- * Ao clicar, trens começam execução
- */
-void MainWindow::on_pushButton_clicked()
-{
-    trem1->start();
-    trem2->start();
-    trem3->start();
-}
-
-/*
- * Ao clicar, trens param execução
- */
-void MainWindow::on_pushButton_2_clicked()
-{
-    trem1->terminate();
-    trem2->terminate();
-    trem3->terminate();
 }

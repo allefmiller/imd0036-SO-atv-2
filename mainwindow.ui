@@ -33,32 +33,6 @@
      <string>T1</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>390</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ligar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>420</y>
-      <width>98</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_trem2">
     <property name="enabled">
      <bool>true</bool>
@@ -138,8 +112,8 @@
    <widget class="QLabel" name="title_header">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>60</y>
+      <x>18</x>
+      <y>125</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -168,8 +142,8 @@
    <widget class="QLabel" name="velocity_background">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>170</y>
+      <x>18</x>
+      <y>190</y>
       <width>161</width>
       <height>185</height>
      </rect>
@@ -198,21 +172,42 @@
    <widget class="QSlider" name="slider_t1">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>210</y>
+      <x>48</x>
+      <y>230</y>
       <width>121</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="tracking">
+     <bool>false</bool>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="invertedControls">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="color_t1">
     <property name="geometry">
      <rect>
-      <x>32</x>
-      <y>215</y>
+      <x>30</x>
+      <y>235</y>
       <width>10</width>
       <height>10</height>
      </rect>
@@ -227,8 +222,8 @@
    <widget class="QLabel" name="color_t2">
     <property name="geometry">
      <rect>
-      <x>32</x>
-      <y>245</y>
+      <x>30</x>
+      <y>265</y>
       <width>10</width>
       <height>10</height>
      </rect>
@@ -246,11 +241,14 @@
    <widget class="QSlider" name="slider_t2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>240</y>
+      <x>48</x>
+      <y>260</y>
       <width>121</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -259,11 +257,14 @@
    <widget class="QSlider" name="slider_t3">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>265</y>
+      <x>48</x>
+      <y>285</y>
       <width>121</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -272,8 +273,8 @@
    <widget class="QLabel" name="color_t3">
     <property name="geometry">
      <rect>
-      <x>32</x>
-      <y>270</y>
+      <x>30</x>
+      <y>290</y>
       <width>10</width>
       <height>10</height>
      </rect>
@@ -288,11 +289,14 @@
    <widget class="QSlider" name="slider_t4">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>290</y>
+      <x>48</x>
+      <y>310</y>
       <width>121</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -301,8 +305,8 @@
    <widget class="QLabel" name="color_t4">
     <property name="geometry">
      <rect>
-      <x>32</x>
-      <y>295</y>
+      <x>30</x>
+      <y>315</y>
       <width>10</width>
       <height>10</height>
      </rect>
@@ -317,11 +321,14 @@
    <widget class="QSlider" name="slider_t5">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>315</y>
+      <x>48</x>
+      <y>335</y>
       <width>121</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -330,8 +337,8 @@
    <widget class="QLabel" name="color_t5">
     <property name="geometry">
      <rect>
-      <x>32</x>
-      <y>320</y>
+      <x>30</x>
+      <y>340</y>
       <width>10</width>
       <height>10</height>
      </rect>
@@ -343,11 +350,87 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="trem3">
+   <widget class="QLabel" name="trem1">
     <property name="geometry">
      <rect>
       <x>303</x>
-      <y>40</y>
+      <y>30</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>sprites/sprite-train-down.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="trem2">
+    <property name="geometry">
+     <rect>
+      <x>484</x>
+      <y>30</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/windows-mint/sprite-train-down.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="trem3">
+    <property name="geometry">
+     <rect>
+      <x>213</x>
+      <y>220</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/windows-mint/sprite-train-down.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="trem4">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>220</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/windows-mint/sprite-train-down.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="trem5">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>220</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -367,8 +450,6 @@
    <zorder>background</zorder>
    <zorder>trilho</zorder>
    <zorder>sidebar</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
    <zorder>title_header</zorder>
    <zorder>velocity_background</zorder>
    <zorder>slider_t1</zorder>
@@ -381,7 +462,11 @@
    <zorder>color_t4</zorder>
    <zorder>slider_t5</zorder>
    <zorder>color_t5</zorder>
+   <zorder>trem1</zorder>
+   <zorder>trem2</zorder>
    <zorder>trem3</zorder>
+   <zorder>trem4</zorder>
+   <zorder>trem5</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

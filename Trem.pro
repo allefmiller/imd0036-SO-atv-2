@@ -11,6 +11,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Trem
 TEMPLATE = app
 
+PATH = $$PWD
+
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -20,3 +22,9 @@ HEADERS  += mainwindow.h \
     trem.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES += \
+    sprites/sprite-train-down.png \
+    sprites/sprite-train-left.png \
+    sprites/sprite-train-right.png \
+    sprites/sprite-train-up.png
