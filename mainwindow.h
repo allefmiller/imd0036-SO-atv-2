@@ -28,6 +28,8 @@ public slots:
 private:
     Ui::MainWindow *ui;
 
+    QString path;
+
     //Cria os objetos TREM's
     Trem *trem1;
     Trem *trem2;
