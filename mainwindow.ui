@@ -445,6 +445,22 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>220</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:rgb(14, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>label_trem2</zorder>
    <zorder>label_trem1</zorder>
    <zorder>background</zorder>
@@ -467,6 +483,7 @@
    <zorder>trem3</zorder>
    <zorder>trem4</zorder>
    <zorder>trem5</zorder>
+   <zorder>label</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

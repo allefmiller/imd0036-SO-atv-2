@@ -140,6 +140,9 @@ void Trem::run(){
             if(y == 220 && x == 420)
                 sem_post(&sem2);
 
+            if(y == 220 && x == 450)
+                qInfo() << "Opa!";
+
             if(this->velocidade != 0) {
                 if (y == 220 && x < 570){ // andar para a direitas
                     x+=10;
