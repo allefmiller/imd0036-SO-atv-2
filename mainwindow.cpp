@@ -27,6 +27,8 @@ MainWindow::MainWindow(QWidget *parent) :
     trem3->start();
     trem4->start();
     trem5->start();
+
+    ui->trilho->setPixmap(QPixmap(path + "sprites/sprite-trilho.png"));
 }
 
 void MainWindow::updateInterface(int id, int x, int y, int direcao){
